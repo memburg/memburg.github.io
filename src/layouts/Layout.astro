@@ -28,9 +28,10 @@ const { title } = Astro.props;
 	}
 
 	:root {
-		--colour-bg: #dfcdcd;
+		--colour-bg: rgb(224,217,217);
 		--viewport-max-height: 100%;
-		--viewport-max-width: 1200px;
+		--page-width: 95%;
+		--page-max-width: 1200px;
 	}
 
 	html,
@@ -40,8 +41,8 @@ const { title } = Astro.props;
 		max-height: var(--viewport-max-height);
 
 		/* Width setup */
-		width: var(--viewport-max-width);
-		max-width: var(--viewport-max-width);
+		width: var(--page-width);
+		max-width: var(--page-max-width);
 
 		/* Background setup */
 		background-color: var(--colour-bg);
@@ -52,5 +53,5 @@ const { title } = Astro.props;
 </style>
 
 <style is:global>
-
+	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Herr+Von+Muellerhoff&display=swap');
 </style>

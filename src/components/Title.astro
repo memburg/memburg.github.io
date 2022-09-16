@@ -1,0 +1,40 @@
+---
+export interface Props {
+    pseudonym: string;
+    role: string;
+}
+
+const { pseudonym, role } = Astro.props;
+---
+
+<div>
+    <h1>{pseudonym}</h1>
+    <h3>{role}</h3>
+</div>
+
+<style>
+    div {
+        width: 100%;
+        height: fit-content;
+        align-self: center;
+    }
+
+    h1 {
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 5px;
+        color: #141414;
+        font-size: 90px;
+    }
+
+    h3 {
+        font-family: 'Herr Von Muellerhoff', cursive;
+        letter-spacing: 15px;
+        color: #272727;
+        font-size: 40px;
+    }
+
+    h1,
+    h3 {
+        text-align: center;
+    }
+</style>

@@ -1,19 +1,31 @@
 ---
+// Layouts
 import Layout from "../layouts/Layout.astro";
 import Container from "../layouts/Container.astro";
+
+// Components
 import Image from "../components/Image.astro";
+import Title from "../components/Title.astro";
 ---
 
 <Layout title="Ramb Memburg | Software Engineer">
 	<Container>
 		<Image
-			src="/favicon.svg"
-			alt="An image of a 3D model made in MagicaVoxel"/>
-		<div>Text #2</div>
+			src="/media/room.png"
+			alt="My room made in MagicaVoxel"
+			jsIdentifier="room"
+		/>
+
+		<Title pseudonym="Ramb Memburg" role="Software Engineer" />
 	</Container>
 </Layout>
 
-<style>
-	:root {
-	}
-</style>
+<script is:inline>
+	const imageComponent = document.querySelector('[js-identifier="room"]');
+	const imagesList = ["room", "room_red", "room_pink", "room_yellow"];
+	const randomImage = imagesList[(imagesList.length * Math.random()) | 0];
+	const imagePath = `/media/${randomImage}.png`;
+
+	// Set source
+	imageComponent.setAttribute("src", imagePath);
+</script>
