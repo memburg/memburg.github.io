@@ -1,9 +1,10 @@
 ---
-// To be added if needed
+import Nav from "../components/Nav.astro";
 ---
 
 <div class="container">
     <slot />
+    <Nav active="home" />
 </div>
 
 <style>
@@ -14,5 +15,6 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         transition: opacity 1s ease;
+        position: relative;
     }
 </style>
