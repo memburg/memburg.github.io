@@ -1,0 +1,25 @@
+---
+// Layouts
+import Layout from "../layouts/Layout.astro";
+import Container from "../layouts/Container.astro";
+
+// Components
+import Image from "../components/Image.astro";
+import Text from "../components/Text.astro";
+---
+
+<Layout title="Ramb Memburg | Software Engineer">
+	<Container>
+		<Image
+			src="/media/room.png"
+			alt="My room made in MagicaVoxel"
+			jsIdentifier="room"
+		/>
+
+		<Text pseudonym="About">
+			<p>Software Engineer by the Autonomous University of Queretaro with over two years of professional experience in programming, automation testing, and test case design.</p>
+        	<p>Passionate about learning new tech stuff, creating side projects, and learning foreign languages.</p>
+        	<p>Some of the technologies I have recently worked with are: Java, Selenium, JavaScript, Astro, Postman, and TypeScript.</p>
+		</Text>
+	</Container>
+</Layout>

@@ -5,7 +5,7 @@ import Container from "../layouts/Container.astro";
 
 // Components
 import Image from "../components/Image.astro";
-import Title from "../components/Title.astro";
+import Main from "../components/Main.astro";
 ---
 
 <Layout title="Ramb Memburg | Software Engineer">
@@ -16,16 +16,6 @@ import Title from "../components/Title.astro";
 			jsIdentifier="room"
 		/>
 
-		<Title pseudonym="Ramb Memburg" role="Software Engineer" />
+		<Main pseudonym="Ramb Memburg" role="Software Engineer" />
 	</Container>
 </Layout>
-
-<script is:inline>
-	const imageComponent = document.querySelector('[js-identifier="room"]');
-	const imagesList = ["room", "room_red", "room_pink", "room_yellow"];
-	const randomImage = imagesList[(imagesList.length * Math.random()) | 0];
-	const imagePath = `/media/${randomImage}.png`;
-
-	// Set source
-	imageComponent.setAttribute("src", imagePath);
-</script>

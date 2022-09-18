@@ -1,0 +1,47 @@
+---
+export interface Props {
+    pseudonym: string;
+}
+
+const { pseudonym } = Astro.props;
+---
+
+<div>
+    <h1>{pseudonym}</h1>
+    <div class="text">
+        <slot />
+    </div>
+</div>
+
+<style>
+    div {
+        width: 100%;
+        height: fit-content;
+        align-self: center;
+        animation: fadeIn 1s;
+        display: flex;
+        flex-flow: column;
+    }
+
+    h1 {
+        font-family: "Bebas Neue", cursive;
+        letter-spacing: 5px;
+        color: #141414;
+        font-size: 7rem;
+        text-align: center;
+    }
+
+    .text {
+        width: 80%;
+    }
+</style>
+
+<style is:global>
+    p {
+        text-align: left;
+        text-align: justify;
+        font-size: 1.7rem;
+        font-family: 'Roboto', sans-serif;
+        color: #222222;
+    }
+</style>
