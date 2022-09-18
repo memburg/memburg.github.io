@@ -7,6 +7,10 @@
 </nav>
 
 <style>
+    :root {
+		--colour-navbar-text: rgb(46, 46, 46);
+    }
+
     nav {
         right: 0;
         height: 100%;
@@ -24,8 +28,14 @@
         font-family: "Bebas Neue", cursive;
         writing-mode: vertical-rl;
         transform: scale(-1);
-        text-decoration: none;
+        text-decoration: underline 0.5rem rgba(46, 46, 46, 0);
         text-transform: uppercase;
+        color: var(--colour-navbar-text);
+        transition: text-decoration-color 500ms;
+    }
+
+    nav a:hover {
+        text-decoration-color: rgba(46, 46, 46, 1);
     }
 
     nav a:visited {
