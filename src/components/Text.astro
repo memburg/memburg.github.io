@@ -1,13 +1,13 @@
 ---
 export interface Props {
-    pseudonym: string;
+    title: string;
 }
 
-const { pseudonym } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <div>
-    <h1>{pseudonym}</h1>
+    <h1>{title}</h1>
     <div class="text">
         <slot />
     </div>
@@ -37,11 +37,27 @@ const { pseudonym } = Astro.props;
 </style>
 
 <style is:global>
-    p {
+    h3, p {
         text-align: left;
         text-align: justify;
-        font-size: 1.7rem;
         font-family: 'Roboto', sans-serif;
         color: #222222;
+    }
+
+    p {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+    }
+
+    h3 span {
+        color: #303030;
+        font-size: 1.1rem;
     }
 </style>

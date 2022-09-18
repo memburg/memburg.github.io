@@ -2,13 +2,12 @@
 export interface Props {
     src: string;
     alt: string;
-	jsIdentifier: string;
 }
 
-const { src, alt, jsIdentifier } = Astro.props;
+const { src, alt } = Astro.props;
 ---
 
-<img src={src} alt={alt} js-identifier={jsIdentifier} />
+<img src={src} alt={alt} />
 
 <style>
     :root {
