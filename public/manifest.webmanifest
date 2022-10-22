@@ -1,0 +1,16 @@
+{
+    "name": "Ramb Memburg: Software Engineer",
+    "short_name": "Memburg",
+    "description": "Ramb Memburg's personal PWA.",
+    "start_url": "https://memburg.com/",
+    "display": "fullscreen",
+    "theme_color": "#e0d9d9",
+    "background_color": "#e0d9d9",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "32x32",
+            "type": "image/svg"
+        }
+    ]
+}
