@@ -11,4 +11,13 @@
         gap: 20px;
         position: relative;
     }
+
+    @media (orientation: portrait) {
+        .container {
+            grid-auto-flow: dense;
+            grid-template-columns: none;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0;
+        }
+    }
 </style>

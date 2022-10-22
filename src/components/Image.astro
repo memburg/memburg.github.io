@@ -1,7 +1,7 @@
 ---
 export interface Props {
-    src: string;
-    alt: string;
+	src: string;
+	alt: string;
 }
 
 const { src, alt } = Astro.props;
@@ -10,7 +10,7 @@ const { src, alt } = Astro.props;
 <img src={src} alt={alt} />
 
 <style>
-    :root {
+	:root {
 		--image-width: 100%;
 		--image-height: auto;
 	}
@@ -18,7 +18,15 @@ const { src, alt } = Astro.props;
 	img {
 		width: var(--image-width);
 		height: var(--image-height);
-        align-self: center;
+		align-self: center;
 		animation: fadeIn 2s;
+		justify-self: center;
+	}
+
+	@media (orientation: portrait) {
+		img {
+			width: 80%;
+			grid-row: 2;
+		}
 	}
 </style>

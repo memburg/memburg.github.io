@@ -34,6 +34,12 @@ const { title } = Astro.props;
     .text {
         width: 80%;
     }
+
+    @media (orientation: portrait) {
+        h1 {
+            font-size: 4rem;
+        }
+    }
 </style>
 
 <style is:global>
@@ -65,5 +71,11 @@ const { title } = Astro.props;
         color: #303030;
         font-size: 1.1rem;
         text-decoration: none;
+    }
+
+    @media (orientation: portrait) {
+        p {
+            font-size: 1.3rem;
+        }
     }
 </style>
