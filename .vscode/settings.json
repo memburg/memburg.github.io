@@ -10,7 +10,7 @@
     "editor.tabSize": 4
   },
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.formatOnSave": true,
     "editor.tabSize": 4
   }
