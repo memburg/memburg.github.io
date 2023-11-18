@@ -1,3 +1,5 @@
+"use strict";
+
 (async () => {
     // Get body to attach the components
     const body = document.querySelector('body');
