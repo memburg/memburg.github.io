@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&display=swap');
 
 body {
     /* center body */
@@ -7,4 +7,5 @@ body {
     max-width: 100%;
     background-color: rgb(32, 32, 35);
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
 }
