@@ -1,18 +1,36 @@
 <style>
     header {
-        height: 55px;
-        border: 1px solid black;
+        height: 56px;
+        width: 100%;
+        max-width: 100%;
 
         table {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 800px;
             height: inherit;
-            border: 1px solid white;
-            background-color: red;
-
             table-layout: fixed;
 
             td {
-                border: 1px solid green;
                 text-align: center;
+
+                a {
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+
+                a:active {
+                    color: blue;
+                    text-decoration: none;
+                }
+
+                a:visited {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -21,11 +39,11 @@
 <header>
     <table>
         <tr>
-            <td>Ramb Memburg</td>
-            <td>Bio</td>
-            <td>Experience</td>
-            <td>Projects</td>
-            <td>Interests</td>
+            <td><a href="#">Ramb Memburg</a></td>
+            <td><a href="#">Bio</a></td>
+            <td><a href="#">Experience</a></td>
+            <td><a href="#">Projects</a></td>
+            <td><a href="#">Contact</a></td>
         </tr>
     </table>
 </header>
