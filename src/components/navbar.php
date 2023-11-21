@@ -39,14 +39,12 @@
 
 <nav>
     <table>
-        <tbody>
-            <tr>
-                <td><a href="/">Ramb Memburg</a></td>
-                <td><a href="#">Bio</a></td>
-                <td><a href="#">Experience</a></td>
-                <td><a href="#">Projects</a></td>
-                <td><a href="#">Contact</a></td>
-            </tr>
-        </tbody>
+        <tr>
+            <td><a href="/">Ramb Memburg</a></td>
+            <td><a href="#">Bio</a></td>
+            <td><a href="#">Experience</a></td>
+            <td><a href="#">Projects</a></td>
+            <td><a href="#">Contact</a></td>
+        </tr>
     </table>
 </nav>
