@@ -13,5 +13,8 @@
     "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.formatOnSave": true,
     "editor.tabSize": 4
+  },
+  "files.associations": {
+    "*.php": "html"
   }
 }
