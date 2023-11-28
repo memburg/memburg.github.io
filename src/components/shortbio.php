@@ -22,12 +22,28 @@
 
                 & .nested-table {
                     height: 100%;
+                    width: 100%;
 
                     & tr {
                         height: 50%;
 
-                        & h2 {
-                            font-size: 30px;
+                        & td {
+                            position: relative;
+                            width: 100%;
+
+                            & h2 {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                font-size: 30px;
+                            }
+
+                            & .short-description {
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
@@ -57,7 +73,9 @@
                     </tr>
 
                     <tr>
-                        <td>( Hobbyist / Developer / Enthusiast )</td>
+                        <td>
+                            <label class="short-description">( Hobbyist / Developer / Enthusiast )</label>
+                        </td>
                     </tr>
                 </table>
             </td>

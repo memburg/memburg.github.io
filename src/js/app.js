@@ -17,7 +17,9 @@
 
     // Load the components
     const shortbio = await loadComponent('shortbio');
+    const bio = await loadComponent('bio');
 
     // Attach components to the main tag
     main.insertAdjacentHTML('beforeend', shortbio);
+    main.insertAdjacentHTML('beforeend', bio);
 })();
