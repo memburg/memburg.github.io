@@ -1,12 +1,13 @@
 <style>
-    div {
+    .shortbio-container {
         width: 100%;
         max-width: 100%;
+        max-height: 100px;
 
-        & table {
+        & .upper-table {
             margin: 0 auto;
             width: 100%;
-            max-width: 430px;
+            max-width: 450px;
             height: inherit;
             table-layout: fixed;
 
@@ -16,8 +17,20 @@
 
             & .pseudonym {
                 width: calc(100% - 100px);
-                font-size: 30px;
+                max-width: calc(100% - 100px);
                 color: #f6eeff;
+
+                & .nested-table {
+                    height: 100%;
+
+                    & tr {
+                        height: 50%;
+
+                        & h2 {
+                            font-size: 30px;
+                        }
+                    }
+                }
             }
 
             & .profile-picture {
@@ -32,18 +45,23 @@
     }
 </style>
 
-<div>
-    <table>
+<div class="shortbio-container">
+    <table class="upper-table">
         <tr>
             <td class="pseudonym">
-                <h2>Ramb Memburg</h2>
+                <table class="nested-table">
+                    <tr>
+                        <td>
+                            <h2>Ramb Memburg</h2>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>( Hobbyist / Developer / Enthusiast )</td>
+                    </tr>
+                </table>
             </td>
             <td class="profile-picture"></td>
-        </tr>
-        <tr>
-            <td>
-                ( Hobbyist / Developer / Enthusiast)
-            </td>
         </tr>
     </table>
 </div>
