@@ -12,6 +12,17 @@
             max-width: 450px;
             height: inherit;
 
+            & th,
+            td {
+                font-size: 14px;
+            }
+
+            & .bio-title {
+                text-align: left;
+                height: 64px;
+                text-decoration: underline;
+            }
+
             & .year {
                 width: 30%;
                 font-weight: 400;
@@ -23,7 +34,8 @@
 <div class="bio">
     <table>
         <tr>
-            <th>Bio</th>
+            <th class="bio-title">Bio</th>
+            <th></th>
         </tr>
 
         <tr>
