@@ -59,6 +59,30 @@
             }
         }
     }
+
+    .gradient-text {
+        background: linear-gradient(to right,
+                rgb(212, 192, 255) 20%,
+                #ffb7fd 30%,
+                #fee1ff 70%,
+                #cbb5ff 80%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        background-size: 500% auto;
+        animation: textShine 4s linear infinite alternate;
+    }
+
+    @keyframes textShine {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        100% {
+            background-position: 100% 50%;
+        }
+    }
 </style>
 
 <div class="shortbio-container">
@@ -68,7 +92,7 @@
                 <table class="nested-table">
                     <tr>
                         <td>
-                            <h2>Ramb Memburg</h2>
+                            <h2 class="gradient-text">Ramb Memburg</h2>
                         </td>
                     </tr>
 
