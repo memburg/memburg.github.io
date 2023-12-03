@@ -17,19 +17,13 @@
                 }
 
                 & td {
-                    height: 50px;
+                    height: 70px;
                     font-size: 14px;
-                    position: relative;
-
-                    & .year,
-                    .event {
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                    }
+                    text-indent: -50px;
+                    padding-left: 50px;
 
                     & .year {
-                        font-weight: 400;
+                        font-weight: 300;
                     }
                 }
             }
@@ -47,30 +41,35 @@
     <table>
         <tr>
             <th class="bio-title">Bio</th>
-            <th></th>
         </tr>
 
         <tr>
-            <td><label class="year">1998</label></td>
-            <td><label class="event">Born in Queretaro, Mexico.</label></td>
-        </tr>
-
-        <tr>
-            <td><label class="year">2020</label></td>
             <td>
-                <label class="event">Completed the Software Engineering program of the Computer Science faculty at the
-                    Autonomous University of Queretaro.</label>
+                <label class="year">1998</label>
+                Born in Queretaro, Mexico.
             </td>
         </tr>
 
         <tr>
-            <td><label class="year">2020</label></td>
-            <td><label class="event">Worked at Deloitte.</label></td>
+            <td>
+                <label class="year">2020</label>
+                Completed the Software Engineering program of the Computer Science faculty at the Autonomous University
+                of Queretaro.
+            </td>
         </tr>
 
         <tr>
-            <td><label class="year">2020 to present</label></td>
-            <td><label class="event">Working at P\S\L Group.</label></td>
+            <td>
+                <label class="year">2020</label>
+                Worked at Deloitte.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label class="year">2020 to present</label>
+                Working at P\S\L Group.
+            </td>
         </tr>
     </table>
 </div>

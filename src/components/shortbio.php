@@ -62,10 +62,10 @@
 
     .gradient-text {
         background: linear-gradient(to right,
-                rgb(212, 192, 255) 20%,
-                #ffb7fd 30%,
-                #fee1ff 70%,
-                #cbb5ff 80%);
+                var(--ctp-mocha-mauve),
+                var(--ctp-mocha-blue),
+                var(--ctp-mocha-peach),
+                var(--ctp-mocha-green));
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
