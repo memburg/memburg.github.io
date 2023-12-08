@@ -17,7 +17,7 @@
 
                 & a {
                     text-decoration: none;
-                    color: rgb(255, 239, 251);
+                    color: var(--ctp-mocha-text);
                 }
 
                 & a:hover {
@@ -26,7 +26,7 @@
                 }
 
                 & a:active {
-                    color: rgb(255, 216, 245);
+                    color: var(--ctp-mocha-mauve);
                 }
 
                 & a:visited {

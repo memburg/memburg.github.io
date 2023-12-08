@@ -3,7 +3,7 @@
         width: 100%;
         max-width: 100%;
         margin-top: 36px;
-        color: #f6eeff;
+        color: var(--ctp-mocha-text);
 
         & table {
             margin: 0 auto;
@@ -19,11 +19,9 @@
                 & td {
                     height: 70px;
                     font-size: 14px;
-                    text-indent: -50px;
-                    padding-left: 50px;
 
                     & .year {
-                        font-weight: 300;
+                        font-weight: 500;
                     }
                 }
             }
@@ -45,30 +43,47 @@
 
         <tr>
             <td>
-                <label class="year">1998</label>
-                Born in Queretaro, Mexico.
+                <table>
+                    <tr>
+                        <td>1998</td>
+                        <td>Born in Queretaro, Mexico.</td>
+                    </tr>
+                </table>
             </td>
         </tr>
 
         <tr>
             <td>
-                <label class="year">2020</label>
-                Completed the Software Engineering program of the Computer Science faculty at the Autonomous University
-                of Queretaro.
+                <table>
+                    <tr>
+                        <td>2020</td>
+                        <td>Completed the Software Engineering program of the Computer Science faculty at the Autonomous
+                            University
+                            of Queretaro.</td>
+                    </tr>
+                </table>
             </td>
         </tr>
 
         <tr>
             <td>
-                <label class="year">2020</label>
-                Worked at Deloitte.
+                <table>
+                    <tr>
+                        <td>2020</td>
+                        <td>Worked at Deloitte</td>
+                    </tr>
+                </table>
             </td>
         </tr>
 
         <tr>
             <td>
-                <label class="year">2020 to present</label>
-                Working at P\S\L Group.
+                <table>
+                    <tr>
+                        <td>2021</td>
+                        <td>Working at P\S\L Group</td>
+                    </tr>
+                </table>
             </td>
         </tr>
     </table>
