@@ -40,7 +40,7 @@
 <nav>
     <table>
         <tr>
-            <td><a href="/">Ramb Memburg</a></td>
+            <td><a href="/">RM</a></td>
             <td><a href="#">Bio</a></td>
             <td><a href="#">Experience</a></td>
             <td><a href="#">Projects</a></td>
