@@ -80,7 +80,7 @@
             <td>
                 <table>
                     <tr>
-                        <td>2021</td>
+                        <td>2021 to present</td>
                         <td>Working at P\S\L Group</td>
                     </tr>
                 </table>
