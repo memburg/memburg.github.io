@@ -1,7 +1,6 @@
 <style>
     .name {
         width: 100%;
-        height: 15rem;
         text-align: center;
         padding: 6 0rem;
         display: flex;
