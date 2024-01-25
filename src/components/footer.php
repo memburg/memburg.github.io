@@ -9,7 +9,7 @@
     }
 </style>
 
-<div class="footer">
+<div class="section footer">
     ©
     <!--  -->
     2024

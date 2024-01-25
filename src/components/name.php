@@ -48,7 +48,7 @@
     }
 </style>
 
-<div class="name">
+<div class="section name">
     <div>
         <h1>Ramb Memburg</h1>
         <h3>automation engineer</h3>

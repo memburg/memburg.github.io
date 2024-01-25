@@ -12,6 +12,6 @@
     }
 </style>
 
-<div class="front-image">
+<div class="section front-image">
     <img src="./media/room.png" alt="voxel art image of my old bedroom">
 </div>
