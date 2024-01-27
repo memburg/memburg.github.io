@@ -8,10 +8,12 @@
     const name = await loadComponent('name');
     const love = await loadComponent('love');
     const contact = await loadComponent('contact');
+    const work = await loadComponent('work');
 
     // append
     body.insertAdjacentHTML('beforeend', frontImage);
     body.insertAdjacentHTML('beforeend', name);
+    body.insertAdjacentHTML('beforeend', work);
     body.insertAdjacentHTML('beforeend', love);
     body.insertAdjacentHTML('beforeend', contact);
 

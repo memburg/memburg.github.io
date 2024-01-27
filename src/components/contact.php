@@ -1,9 +1,16 @@
 <style>
-    .love {
+    .contact {
         & p {
             color: var(--ctp-mocha-text);
             text-align: center;
             font-size: 1.4rem;
+            text-align: justify;
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            line-height: 2rem;
 
             & a,
             & a:visited {
@@ -13,8 +20,8 @@
     }
 </style>
 
-<div class="section love">
+<div class="section contact">
     <h2>Contact</h2>
-    <p>Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a
-        question or just want to say hi, I’ll try my best to get back to you!</p>
+    <p>Although I'm not currently looking for any new opportunities, my inbox is always open. Whether you have a
+        question or just want to say hi, I'll try my best to get back to you!</p>
 </div>
