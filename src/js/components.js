@@ -6,7 +6,7 @@ const loadComponent = async componentName => {
         const textData = await response.text();
         return textData; // Returning the text data
     } catch (error) {
-        console.error('Error fetching the data:', error);
+        console.error("Error fetching the data:", error);
         return null;
     }
 };

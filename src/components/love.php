@@ -15,7 +15,7 @@
 
 <div class="section love">
     <h2>I ♥</h2>
-    <p>Playing Drums, Languages, Pixel & Voxel Art, <a href="https://github.com/memburg" target="_blank">Coding</a>,
+    <p>Music, Languages, Reading, <a href="https://github.com/memburg" target="_blank">Coding</a>,
         Running,
         Judo</p>
 </div>
