@@ -23,7 +23,7 @@
 
 <div class="section work">
     <h2>Work</h2>
-    <p>Ramb is an automation engineer based in Montreal with a passion for creting stuff. Coding is not just his
+    <p>Ramb is an automation engineer based in Montreal with a passion for creating stuff. Coding is not just his
         profession but a source of genuine enjoyment, where he transforms ideas into reality with lines of code. Beyond
         the digital realm, he can be found pounding the pavement for a rejuvenating run or stepping onto the Judo mat,
         where discipline and technique collide.</p>
