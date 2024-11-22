@@ -41,5 +41,5 @@
 </style>
 
 <div class="section front-image">
-    <textarea id="movie"></textarea>
+    <textarea id="movie" readonly></textarea>
 </div>
