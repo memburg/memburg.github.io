@@ -6,13 +6,18 @@
 
         & textarea {
             resize: none;
-            width: 30rem;
-            height: 30rem;
+            width: 218px;
+            height: 246px;
             align-self: center;
             background-color: transparent;
             color: white;
             outline: none;
             border: none;
+            cursor: inherit;
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            letter-spacing: -3px;
+            overflow: hidden;
 
             background: linear-gradient(to right,
                     var(--ctp-frappe-sapphire),
