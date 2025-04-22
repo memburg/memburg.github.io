@@ -1,32 +1,9 @@
-"use strict";
+<section class="front-image">
+    <textarea id="movie" readonly></textarea>
+</section>
 
-(async () => {
-    const body = document.querySelector("body");
-
-    // get components
-    const frontImage = await loadComponent("frontImage");
-    const name = await loadComponent("name");
-    const love = await loadComponent("love");
-    const contact = await loadComponent("contact");
-    const work = await loadComponent("work");
-    const bio = await loadComponent("bio");
-
-    // append
-    body.insertAdjacentHTML("beforeend", frontImage);
-    body.insertAdjacentHTML("beforeend", name);
-    body.insertAdjacentHTML("beforeend", work);
-    body.insertAdjacentHTML("beforeend", bio);
-    body.insertAdjacentHTML("beforeend", love);
-    body.insertAdjacentHTML("beforeend", contact);
-
-    // get footer component
-    const footer = await loadComponent("footer");
-
-    body.insertAdjacentHTML("beforeend", footer);
-
-
-    // Start movie logic
-    const frames = [
+<script>
+	const frames = [
         "⣿⣿⣿⣿⣿⣿⣿⣇⣇⢀⢀⣿⣿⣿⣦⣄⡉⡛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⢀⢀⣿⣿⣿⣿⣿⣿⣷⣦⣤⣉⣙⡛⡛⢿⢿⢿⢿⢿⢿⢿⡛⢫\n⢀⡉⡉⡉⡙⡛⡛⡛⣿⢀⢀⣿⣿⣿⣿⣿⡿⡛⡉⡈⡛⡉⢀⢀⡰⣶⣶⣶⣶⣶⣾⣿⣿\n⣄⣀⣄⢀⡠⢀⢀⡄⣿⢀⢀⢀⢀⢀⢀⡀⢀⣀⣀⣀⢀⣠⣤⡞⡉⡉⢻⣿⣿⣿⣿⣿⣿\n⣶⢆⢉⢭⢀⢐⡒⢃⡛⡠⣿⡈⡛⡒⢀⡈⡙⡛⢿⢿⢿⢿⢿⢠⣴⣄⢀⢿⣿⣿⣿⣿⣿\n⣿⣿⡇⣶⡀⣰⢏⣼⡿⢿⣆⢾⣿⣶⣶⣶⣶⣶⢪⣅⢀⢀⣴⣿⣿⡟⢀⣼⣿⣿⣿⣿⣿\n⣿⣿⣷⡘⡷⡙⣾⢏⢄⣦⢹⡔⢿⢿⡛⡛⡛⡛⡧⣭⣷⣿⡛⡟⢁⡈⡉⡛⢿⢿⢿⢿⣿\n⡟⡛⡛⢁⣾⢳⡟⣼⣇⡇⣧⡇⡒⡒⢂⢀⣦⣄⣠⣿⣿⣏⣀⡀⢀⢀⢀⢀⣴⣶⣾⣿⣿\n⣤⣾⡿⢢⣿⣸⡇⣎⢹⢁⢿⢸⢀⢀⢀⡈⡛⢻⣿⡟⡛⢡⣿⣿⣠⣤⣶⣿⣿⣿⣿⣿⣿\n⣿⢀⢀⢸⣿⣿⢃⡈⢀⡓⢉⢸⡠⡤⡶⢿⡓⢐⡛⢋⢁⡉⡙⢱⣿⣿⣿⣿⣿⡇⢿⣿⡿\n⣿⢀⣠⣬⡍⢿⢀⢀⢀⢀⢠⣠⣠⣤⣤⣤⣶⣶⣆⢀⣀⣤⣶⣶⣿⣿⣿⣿⣿⣧⡰⣿⣿\n⣿⡈⢋⡡⣾⢸⡇⣾⣶⡻⡟⢿⣾⣿⣿⣿⣿⣿⡏⣾⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣮⣛\n⣿⢀⢀⢀⢿⡞⣿⢿⣿⢇⣇⡏⢻⣿⣿⣿⣿⣿⣿⢹⣿⣿⣿⣿⣿⢫⣿⣿⣿⣿⣿⣿⣿\n⣿⢀⢀⢀⡘⣷⢹⣧⣉⣫⡾⢹⢇⣿⣿⣿⡿⡟⢁⣠⣭⣵⣌⡛⡉⢸⣿⣿⣿⣿⣿⣿⣿\n⢰⢀⢀⢀⢀⢰⢆⡙⡛⢛⣵⣿⣿⢟⣛⣃⢀⢀⡘⣿⣿⢿⢏⢀⡰⣌⡛⢿⢿⣿⣿⣿⣿\n⢀⢀⢀⢀⢀⡘⢠⡟⡙⡉⡛⣿⣏⢸⡛⢿⢿⢿⢃⢹⢃⣠⣤⡴⡞⢂⢻⢿⢦⡈⡛⡙⢋\n⢀⢀⢀⢀⢊⡉⢀⢀⢀⢀⡒⢁⡈⢀⢀⢀⢀⢀⢀⢀⢀⡉⢁⢀⢁⢀⢀⢀⢀⢀⢀⢀⢀\n⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀",
         "⣿⣿⣿⣿⣿⣿⣿⣧⣇⢀⢀⣿⣿⣿⣦⣄⡉⡛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣿⣿⣿⣿⢀⢀⣿⣿⣿⣿⣿⣿⣷⣦⣤⣉⣉⡛⡛⢿⢿⢿⢿⢿⢿⡟⡛⢉\n⢀⢀⢀⡈⡉⡉⡉⡉⣟⢀⢀⢿⢿⢿⣿⣿⣿⡿⢿⡟⡉⡈⡙⢁⢀⢀⣀⢲⣶⣶⣾⣿⣿\n⣄⣤⣤⣤⣀⡀⡠⢄⣿⢀⢀⢄⣀⣀⢀⢀⢀⣀⢀⣀⣀⣀⣀⢀⢀⡈⢻⣿⣿⣿⣿⣿⣿\n⣽⣶⣿⡗⢉⢭⡔⢂⡛⡠⣿⢸⣷⣈⢻⡛⢂⡈⡙⡛⢿⢿⢿⢠⣴⣄⢀⢹⣿⣿⣿⣿⣿\n⣶⣾⡁⣦⡙⣴⢏⣾⡿⢿⣄⢿⣾⣿⣾⣷⣶⣶⢠⣄⢀⢀⣸⣿⣿⡟⢀⣼⣿⣿⣿⣿⣿\n⣿⣿⣷⡘⡷⡙⣾⢏⢄⣦⡹⡐⢿⡛⡛⡛⡛⡛⡧⣭⣷⣿⡛⡟⢁⡈⡙⡛⢿⢿⢿⢿⣿\n⡛⡛⢋⢁⣿⢻⡟⣼⣧⡇⣧⡇⡒⡒⢀⣀⣦⣔⣠⣿⣿⣟⣀⡀⢀⢀⢀⢀⣴⣶⣾⣿⣿\n⣤⣴⡾⢲⣿⣸⡗⣎⢸⢁⢿⢱⢀⢀⢀⡈⡛⢿⣿⡟⡛⣩⣿⣿⣰⣶⣶⣾⣿⣿⣿⣿⣿\n⣿⢀⢀⢸⡏⣿⢁⢀⢀⡓⢉⢸⢠⣤⣾⡷⡶⢄⡛⡛⡛⡛⡛⢵⣿⣿⣿⣿⣿⡇⢿⣿⡿\n⣿⢀⣠⣤⡅⢿⢀⢀⢀⡀⢠⣀⣠⣤⣤⣤⣤⣤⣄⢀⢀⣀⣀⣤⣽⣿⣿⣿⣿⣧⡰⣿⣿\n⣿⡈⡉⡡⣾⢸⡇⣾⣷⡻⡞⢿⣾⣿⣿⣿⣿⣿⣿⢴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⣙\n⣿⢀⢀⢀⢿⡞⣿⢻⣿⢣⣇⡇⢿⣿⣿⣿⣿⣿⡿⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n⢿⢀⢀⢀⡘⢧⢹⣧⣁⣫⡾⡹⢇⣿⣿⣿⡿⢋⣀⣭⣟⣩⡹⢿⡟⣾⣿⣿⣿⣿⣿⣿⣿\n⢐⢀⢀⢀⢀⢐⢀⡙⡛⢋⣴⣿⣿⢛⣙⣃⢀⢀⡙⣿⡿⢿⢋⢀⢀⡛⢿⢿⢿⣿⣿⣿⣿\n⢀⢀⢀⢀⢀⢀⡠⡛⡉⡉⡉⢸⢇⡘⡛⡛⡛⢿⢃⢹⢀⣢⣄⣰⣏⡻⡟⡗⢦⡈⡟⡙⡈\n⢀⢀⢀⢀⡈⡉⢀⢀⢀⢀⢂⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⡉⡛⢿⡟⢃⢀⢀⢀⢀⢀⢀⢀\n⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀",
         "⣿⣿⣿⣿⣿⣿⣿⣧⡇⢀⢀⣿⣿⣿⣦⣄⡙⢻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n⣿⣿⣿⣿⣿⣿⣿⣿⡷⢀⢀⣿⣿⣿⣿⣿⣿⣷⣦⣄⣉⡙⡛⢻⢿⢿⢿⢿⢿⢿⡟⡛⢉\n⢀⢀⢀⡈⡉⡉⡉⢋⡟⢀⢀⢿⢿⢿⣿⣿⣿⡿⡿⡟⡉⡈⡙⢁⢀⢀⡀⢲⣶⣶⣾⣿⣿\n⣄⢀⣤⣤⣀⡀⡠⢄⣿⢀⢀⢄⣀⡀⡀⢀⢀⢀⢀⣀⣀⣀⣀⢀⢀⡘⢻⣿⣿⣿⣿⣿⣿\n⣽⣶⣿⡗⢉⢭⡖⢀⡛⡠⡷⢸⣶⣈⢛⡓⢂⡈⡙⡛⢿⢿⢿⢠⣤⣄⢀⢹⣿⣿⣿⣿⣿\n⣶⣾⡡⣦⡙⣴⢏⣾⡿⢷⣄⢿⣾⣿⣾⣷⣶⣶⢠⣄⢀⢀⣼⣿⣿⡟⢀⣼⣿⣿⣿⣿⣿\n⣿⣿⣷⡘⡷⡋⣾⢏⢄⡦⢹⡐⢿⡟⡛⡛⡛⡛⡤⣭⣷⣿⡛⡟⢁⡈⡙⡛⢿⢿⢿⢿⣿\n⡛⡛⢋⢁⣿⢻⡟⣼⣤⡇⣇⡇⡒⡒⢀⣀⣦⣜⣠⣿⣿⣏⣀⡀⢀⢀⢀⢀⣶⣾⣾⣿⣿\n⣤⣶⡾⢲⣿⣾⡗⡞⢸⢀⢿⢱⢀⢀⢀⡈⡛⢿⣿⡟⡛⣹⣿⣿⣰⣶⣶⣿⣿⣿⣿⣿⣿\n⣿⢀⢀⢸⡇⣿⢁⢀⢀⡓⢉⢸⢠⣤⣾⡷⡶⡈⡛⡛⡛⡛⡛⢵⣿⣿⣿⣿⣿⡇⢿⣿⡿\n⣿⢀⣠⣬⢅⣿⢀⢀⢀⡀⣠⣀⣠⣤⣤⣤⣤⣤⣄⢀⢀⣀⣀⣤⣽⣿⣿⣿⣿⣧⡰⣿⣿\n⣿⡈⡉⡱⣾⢸⡎⣾⣶⡻⡟⡾⣿⣿⣿⣿⣿⣿⣿⢴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⣛\n⣿⢀⢀⢀⣿⡜⣯⢣⣿⢣⢅⡇⢿⣿⣿⣿⣿⣿⡿⣻⣿⣿⣿⣿⣿⣟⣿⣿⣿⣿⣿⣿⣿\n⣿⢀⢀⢀⡘⣧⢹⣦⣁⣫⡞⡸⢆⣿⣿⣿⡿⢋⣀⣽⣟⣩⢹⢿⡟⣾⣿⣿⣿⣿⣿⣿⣿\n⡰⢀⢀⢀⢀⡰⢀⡙⡛⣋⣴⣿⣿⢛⣛⣃⢀⢀⡛⣿⡿⢿⢃⢀⢀⡻⢿⢿⣿⣿⣿⣿⣿\n⢀⢀⢀⢀⢀⢀⡰⡛⡉⡙⢋⣿⣇⡘⡛⡛⡛⢿⢂⢻⢀⣦⣄⣰⣏⢻⡛⡶⢦⡘⡟⡙⡈\n⢀⢀⢀⢀⡈⡉⢀⢀⢀⢀⢂⢁⢀⢀⢀⢀⢀⢀⢀⢀⢀⡉⡛⢿⡟⢁⢀⢀⢀⢀⢀⢀⢀\n⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀⢀",
@@ -264,4 +241,53 @@
         movie.value = frames[index];
         index++;
     }, 50);
-})();
+</script>
+
+<style>
+	.front-image {
+		display: flex;
+		justify-content: center;
+		height: 40rem;
+
+		& textarea {
+			resize: none;
+			width: 218px;
+			height: 246px;
+			align-self: center;
+			background-color: transparent;
+			color: white;
+			outline: none;
+			border: none;
+			cursor: inherit;
+			font-size: 1.4rem;
+			line-height: 1.4rem;
+			letter-spacing: -3px;
+			overflow: hidden;
+
+			background: linear-gradient(
+				to right,
+				var(--ctp-frappe-sapphire),
+				var(--ctp-macchiato-teal),
+				var(--ctp-latte-rosewater),
+				var(--ctp-frappe-sky)
+			);
+
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			text-fill-color: transparent;
+			background-size: 500% auto;
+			animation: movingBackgroundText 2s linear infinite alternate;
+		}
+	}
+
+	@keyframes movingBackgroundText {
+		0% {
+			background-position: 0% 50%;
+		}
+
+		100% {
+			background-position: 100% 50%;
+		}
+	}
+</style>
